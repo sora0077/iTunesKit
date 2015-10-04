@@ -10,6 +10,23 @@
 		D958809A1BC0D2B5008C549B /* iTunesKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D95880991BC0D2B5008C549B /* iTunesKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D95880A11BC0D2B6008C549B /* iTunesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95880961BC0D2B5008C549B /* iTunesKit.framework */; settings = {ASSET_TAGS = (); }; };
 		D95880A61BC0D2B6008C549B /* iTunesKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95880A51BC0D2B6008C549B /* iTunesKitTests.swift */; };
+		D95880D71BC0E721008C549B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95880D21BC0E721008C549B /* Alamofire.framework */; settings = {ASSET_TAGS = (); }; };
+		D95880D81BC0E721008C549B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95880D21BC0E721008C549B /* Alamofire.framework */; settings = {ASSET_TAGS = (); }; };
+		D95880D91BC0E721008C549B /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95880D31BC0E721008C549B /* APIKit.framework */; settings = {ASSET_TAGS = (); }; };
+		D95880DA1BC0E721008C549B /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95880D31BC0E721008C549B /* APIKit.framework */; settings = {ASSET_TAGS = (); }; };
+		D95880DB1BC0E721008C549B /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95880D41BC0E721008C549B /* BrightFutures.framework */; settings = {ASSET_TAGS = (); }; };
+		D95880DC1BC0E721008C549B /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95880D41BC0E721008C549B /* BrightFutures.framework */; settings = {ASSET_TAGS = (); }; };
+		D95880DD1BC0E721008C549B /* LoggingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95880D51BC0E721008C549B /* LoggingKit.framework */; settings = {ASSET_TAGS = (); }; };
+		D95880DE1BC0E721008C549B /* LoggingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95880D51BC0E721008C549B /* LoggingKit.framework */; settings = {ASSET_TAGS = (); }; };
+		D95880DF1BC0E721008C549B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95880D61BC0E721008C549B /* Result.framework */; settings = {ASSET_TAGS = (); }; };
+		D95880E01BC0E721008C549B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95880D61BC0E721008C549B /* Result.framework */; settings = {ASSET_TAGS = (); }; };
+		D95880E21BC0E743008C549B /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D95880D21BC0E721008C549B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95880E31BC0E743008C549B /* APIKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D95880D31BC0E721008C549B /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95880E41BC0E743008C549B /* BrightFutures.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D95880D41BC0E721008C549B /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95880E51BC0E743008C549B /* LoggingKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D95880D51BC0E721008C549B /* LoggingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95880E61BC0E743008C549B /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D95880D61BC0E721008C549B /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95880EA1BC0E77A008C549B /* iTunesKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95880E91BC0E77A008C549B /* iTunesKit.swift */; settings = {ASSET_TAGS = (); }; };
+		D95880EB1BC0E77A008C549B /* iTunesKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95880E91BC0E77A008C549B /* iTunesKit.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +39,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D95880E11BC0E735008C549B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D95880E21BC0E743008C549B /* Alamofire.framework in CopyFiles */,
+				D95880E31BC0E743008C549B /* APIKit.framework in CopyFiles */,
+				D95880E41BC0E743008C549B /* BrightFutures.framework in CopyFiles */,
+				D95880E51BC0E743008C549B /* LoggingKit.framework in CopyFiles */,
+				D95880E61BC0E743008C549B /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D95880961BC0D2B5008C549B /* iTunesKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iTunesKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95880991BC0D2B5008C549B /* iTunesKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTunesKit.h; sourceTree = "<group>"; };
@@ -29,6 +63,13 @@
 		D95880A01BC0D2B6008C549B /* iTunesKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95880A51BC0D2B6008C549B /* iTunesKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesKitTests.swift; sourceTree = "<group>"; };
 		D95880A71BC0D2B6008C549B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95880D21BC0E721008C549B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		D95880D31BC0E721008C549B /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		D95880D41BC0E721008C549B /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
+		D95880D51BC0E721008C549B /* LoggingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoggingKit.framework; path = Carthage/Build/iOS/LoggingKit.framework; sourceTree = "<group>"; };
+		D95880D61BC0E721008C549B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		D95880E71BC0E752008C549B /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		D95880E91BC0E77A008C549B /* iTunesKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +77,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95880DB1BC0E721008C549B /* BrightFutures.framework in Frameworks */,
+				D95880D91BC0E721008C549B /* APIKit.framework in Frameworks */,
+				D95880DF1BC0E721008C549B /* Result.framework in Frameworks */,
+				D95880D71BC0E721008C549B /* Alamofire.framework in Frameworks */,
+				D95880DD1BC0E721008C549B /* LoggingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +89,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95880DA1BC0E721008C549B /* APIKit.framework in Frameworks */,
+				D95880DC1BC0E721008C549B /* BrightFutures.framework in Frameworks */,
+				D95880DE1BC0E721008C549B /* LoggingKit.framework in Frameworks */,
+				D95880E01BC0E721008C549B /* Result.framework in Frameworks */,
 				D95880A11BC0D2B6008C549B /* iTunesKit.framework in Frameworks */,
+				D95880D81BC0E721008C549B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +104,10 @@
 		D958808C1BC0D2B5008C549B = {
 			isa = PBXGroup;
 			children = (
+				D95880E71BC0E752008C549B /* MyPlayground.playground */,
 				D95880981BC0D2B5008C549B /* iTunesKit */,
 				D95880A41BC0D2B6008C549B /* iTunesKitTests */,
+				D95880B01BC0D2E5008C549B /* Frameworks */,
 				D95880971BC0D2B5008C549B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +124,7 @@
 		D95880981BC0D2B5008C549B /* iTunesKit */ = {
 			isa = PBXGroup;
 			children = (
+				D95880E81BC0E764008C549B /* src */,
 				D95880991BC0D2B5008C549B /* iTunesKit.h */,
 				D958809B1BC0D2B5008C549B /* Info.plist */,
 			);
@@ -84,6 +138,26 @@
 				D95880A71BC0D2B6008C549B /* Info.plist */,
 			);
 			path = iTunesKitTests;
+			sourceTree = "<group>";
+		};
+		D95880B01BC0D2E5008C549B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D95880D21BC0E721008C549B /* Alamofire.framework */,
+				D95880D31BC0E721008C549B /* APIKit.framework */,
+				D95880D41BC0E721008C549B /* BrightFutures.framework */,
+				D95880D51BC0E721008C549B /* LoggingKit.framework */,
+				D95880D61BC0E721008C549B /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D95880E81BC0E764008C549B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D95880E91BC0E77A008C549B /* iTunesKit.swift */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +182,7 @@
 				D95880921BC0D2B5008C549B /* Frameworks */,
 				D95880931BC0D2B5008C549B /* Headers */,
 				D95880941BC0D2B5008C549B /* Resources */,
+				D95880E11BC0E735008C549B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -142,6 +217,7 @@
 		D958808D1BC0D2B5008C549B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = jp.sora0077;
 				TargetAttributes = {
@@ -193,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95880EA1BC0E77A008C549B /* iTunesKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95880EB1BC0E77A008C549B /* iTunesKit.swift in Sources */,
 				D95880A61BC0D2B6008C549B /* iTunesKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,26 +385,37 @@
 		D95880AB1BC0D2B6008C549B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iTunesKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.iTunesKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D95880AC1BC0D2B6008C549B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iTunesKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -339,6 +428,10 @@
 		D95880AE1BC0D2B6008C549B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iTunesKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.iTunesKitTests;
@@ -349,6 +442,10 @@
 		D95880AF1BC0D2B6008C549B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iTunesKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.iTunesKitTests;
@@ -375,6 +472,7 @@
 				D95880AC1BC0D2B6008C549B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D95880AD1BC0D2B6008C549B /* Build configuration list for PBXNativeTarget "iTunesKitTests" */ = {
 			isa = XCConfigurationList;
@@ -383,6 +481,7 @@
 				D95880AF1BC0D2B6008C549B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

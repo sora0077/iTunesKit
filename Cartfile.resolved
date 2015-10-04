@@ -1,0 +1,5 @@
+github "Alamofire/Alamofire" "3.0.0-beta.3"
+github "sora0077/LoggingKit" "2.0.0"
+github "antitypical/Result" "0.6.0-beta.3"
+github "Thomvis/BrightFutures" "e8436535ce0e01ef8334ccea4e66193fc7297899"
+github "sora0077/APIKit" "390e70e159dbc0281e83e5f5130277b971d5b578"
