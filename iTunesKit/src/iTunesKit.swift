@@ -10,11 +10,11 @@ import Foundation
 import APIKit
 
 
-protocol iTunesRequestToken: RequestToken {}
+public protocol iTunesRequestToken: RequestToken {}
 
-extension iTunesRequestToken {
+public extension iTunesRequestToken {
     
-    var baseURL: NSURL? {
+    public var baseURL: NSURL? {
         return NSURL(string: "http://")
     }
 }

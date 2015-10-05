@@ -27,6 +27,8 @@
 		D95880E61BC0E743008C549B /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D95880D61BC0E721008C549B /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D95880EA1BC0E77A008C549B /* iTunesKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95880E91BC0E77A008C549B /* iTunesKit.swift */; settings = {ASSET_TAGS = (); }; };
 		D95880EB1BC0E77A008C549B /* iTunesKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95880E91BC0E77A008C549B /* iTunesKit.swift */; settings = {ASSET_TAGS = (); }; };
+		D95880F01BC0EFF8008C549B /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95880EF1BC0EFF8008C549B /* Search.swift */; settings = {ASSET_TAGS = (); }; };
+		D95880F91BC15474008C549B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95880F81BC15474008C549B /* SearchResult.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		D95880D61BC0E721008C549B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		D95880E71BC0E752008C549B /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		D95880E91BC0E77A008C549B /* iTunesKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesKit.swift; sourceTree = "<group>"; };
+		D95880EF1BC0EFF8008C549B /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		D95880F81BC15474008C549B /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,9 +159,43 @@
 		D95880E81BC0E764008C549B /* src */ = {
 			isa = PBXGroup;
 			children = (
+				D95880ED1BC0E981008C549B /* Endpoint */,
+				D95880EC1BC0E971008C549B /* Entity */,
 				D95880E91BC0E77A008C549B /* iTunesKit.swift */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		D95880EC1BC0E971008C549B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D95880F71BC1543E008C549B /* Search */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D95880ED1BC0E981008C549B /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				D95880EE1BC0ECC1008C549B /* Search */,
+				D95880EF1BC0EFF8008C549B /* Search.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		D95880EE1BC0ECC1008C549B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		D95880F71BC1543E008C549B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D95880F81BC15474008C549B /* SearchResult.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D95880EA1BC0E77A008C549B /* iTunesKit.swift in Sources */,
+				D95880F91BC15474008C549B /* SearchResult.swift in Sources */,
+				D95880F01BC0EFF8008C549B /* Search.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
