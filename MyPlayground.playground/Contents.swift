@@ -26,10 +26,16 @@ enum Error: APIKitErrorType {
 
 let itunes = API<Error>()
 
-itunes.request(Search(term: "jack+johnson", country: "JP")).onSuccess { v in
+var search = Search(term: "twitter", country: "JP")
+search.media = "media"
+
+itunes.request(search).onSuccess { v in
     print(v)
 }
-
+//https://itunes.apple.com/jp/album/edge-of-this-world-single/id
+//itunes.request(Lookup(id: 164283721)).onSuccess { v in
+//    print(v)
+//}
 
 
 XCPSetExecutionShouldContinueIndefinitely()

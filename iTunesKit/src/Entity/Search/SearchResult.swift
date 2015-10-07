@@ -17,15 +17,15 @@ enum SearchResultWrapperType: String {
 public enum SearchResultKind: String {
     case Book = "book"
     case Album = "album"
-    case CoachedAudio = "coached-audio"
-    case FeatureMovie = "feature-movie"
-    case InteractiveBooklet = "interactive-booklet"
-    case MusicVideo = "music-video"
-    case PdfPodcast = "pdf podcast"
-    case PodcastEpisode = "podcast-episode"
-    case SoftwarePackage = "software-package"
+//    case CoachedAudio = "coached-audio"
+//    case FeatureMovie = "feature-movie"
+//    case InteractiveBooklet = "interactive-booklet"
+//    case MusicVideo = "music-video"
+//    case PdfPodcast = "podcast"
+//    case PodcastEpisode = "podcast-episode"
+//    case SoftwarePackage = "software-package"
     case Song = "song"
-    case TvEpisode = "tv-episode"
+//    case TvEpisode = "tv-episode"
     case Artist = "artist"
 
 }
@@ -34,6 +34,7 @@ public enum SearchResult {
     case Track(SearchResultTrack)
     case Artist(SearchResultArtist)
     case Collection(SearchResultCollection)
+    case Unsupported([String: AnyObject])
 }
 
 public struct SearchResultTrack {
@@ -92,14 +93,13 @@ public struct SearchResultArtist {
     public internal(set) var artistName: String
     public internal(set) var artistLinkUrl: String
     public internal(set) var artistId: Int
-    public internal(set) var amgArtistId: Int
+    public internal(set) var amgArtistId: Int?
     
     public internal(set) var primaryGenreName: String
     public internal(set) var primaryGenreId: Int
     
     public internal(set) var radioStationUrl: String?
 }
-
 
 public struct SearchResultCollection {
     

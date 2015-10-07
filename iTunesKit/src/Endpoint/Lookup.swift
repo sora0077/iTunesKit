@@ -1,73 +1,26 @@
 //
-//  Search.swift
+//  Lookup.swift
 //  iTunesKit
 //
-//  Created by 林達也 on 2015/10/04.
+//  Created by 林達也 on 2015/10/06.
 //  Copyright © 2015年 jp.sora0077. All rights reserved.
 //
 
 import Foundation
 import APIKit
 
-public struct Search {
-    /// The URL-encoded text string you want to search for. For example: jack+johnson.
-    /// Any URL-encoded text string.
-    ///
-    /// Note: URL encoding replaces spaces with the plus (+) character and all characters except the following are encoded: letters, numbers, periods (.), dashes (-), underscores (_), and asterisks (*).
-    public var term: String
+public struct Lookup {
     
-    /// The two-letter country code for the store you want to search. The search uses the default store front for the specified country. For example: US.
-    ///
-    /// The default is US.
-    public var country: String
+    public var parameters: [String: AnyObject]? = [:]
     
-    /// The media type you want to search for. For example: movie.
-    ///
-    /// The default is all.
-    public var media: String = "all"
-    
-    /// The type of results you want returned, relative to the specified media type. For example: movieArtist for a movie media type search.
-    ///
-    /// The default is the track entity associated with the specified media type.
-    public var entity: String = "allTrack"
-    
-    /// The attribute you want to search for in the stores, relative to the specified media type. For example, if you want to search for an artist by name specify entity=allArtist&attribute=allArtistTerm.
-    ///
-    /// In this example, if you search for term=maroon, iTunes returns "Maroon 5" in the search results, instead of all artists who have ever recorded a song with the word "maroon" in the title.
-    ///
-    /// The default is all attributes associated with the specified media type.
-    public var attribute: String?
-    
-    /// The number of search results you want the iTunes Store to return. For example: 25.
-    ///
-    /// The default is 50.
-    public var limit: Int = 50
-    
-    /// The language, English or Japanese, you want to use when returning search results. Specify the language using the five-letter codename. For example: en_us.
-    ///
-    /// The default is en_us (English).
-    public var lang: String = "en_us"
-    
-    /// A flag indicating whether or not you want to include explicit content in your search results.
-    ///
-    /// The default is Yes.
-    public var explicit: Bool = true
-    
-    /**
-    <#Description#>
-    
-    - parameter term:    Y
-    - parameter country: Y
-    
-    - returns: <#return value description#>
-    */
-    public init(term: String, country: String = "US") {
-        self.term = term
-        self.country = country
+    public init(id: Int, country: String = "US") {
+        parameters?["id"] = id
+        parameters?["country"] = country
     }
+    
 }
 
-extension Search: iTunesRequestToken {
+extension Lookup: iTunesRequestToken {
     
     public typealias Response = [SearchResult]
     public typealias SerializedObject = [String: AnyObject]
@@ -77,23 +30,7 @@ extension Search: iTunesRequestToken {
     }
     
     public var path: String {
-        return "https://itunes.apple.com/search"
-    }
-    
-    public var parameters: [String: AnyObject]? {
-        var dict: [String: AnyObject] = [
-            "term": term,
-            "country": country,
-            "media": media,
-            "entity": entity,
-            "limit": limit,
-            "lang": lang,
-            "explicit": explicit ? "Yes" : "No"
-        ]
-        if let attribute = attribute {
-            dict["attribute"] = attribute
-        }
-        return dict
+        return "https://itunes.apple.com/lookup"
     }
     
     public func transform(request: NSURLRequest?, response: NSHTTPURLResponse?, object: SerializedObject) throws -> Response {
@@ -105,11 +42,8 @@ extension Search: iTunesRequestToken {
             }
             switch wrapperType {
             case .Track:
-                guard let kind = SearchResultKind(rawValue: v["kind"] as! String) else {
-                    return .Unsupported(v)
-                }
                 return .Track(SearchResultTrack(
-                    kind: kind,
+                    kind: SearchResultKind(rawValue: v["kind"] as! String)!,
                     artistId: v["artistId"] as! Int,
                     collectionId: v["collectionId"] as! Int,
                     trackId: v["trackId"] as! Int,

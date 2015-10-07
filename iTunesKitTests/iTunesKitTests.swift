@@ -7,7 +7,26 @@
 //
 
 import XCTest
+import APIKit
 @testable import iTunesKit
+
+enum Error: APIKitErrorType {
+    
+    case Unknown
+    
+    static func networkError(error: ErrorType) -> Error {
+        return .Unknown
+    }
+    
+    static func validationError(error: ErrorType) -> Error {
+        return .Unknown
+    }
+    
+    static func serializeError(error: ErrorType) -> Error {
+        return .Unknown
+    }
+}
+
 
 class iTunesKitTests: XCTestCase {
     
@@ -24,6 +43,22 @@ class iTunesKitTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let expect = self.expectationWithDescription("")
+        
+        let itunes = API<Error>()
+        
+        var search = Search(term: "twitter", country: "JP")
+        search.media = "media"
+        
+        itunes.request(search).onSuccess { v in
+            print(v)
+            expect.fulfill()
+        }
+        
+        self.waitForExpectationsWithTimeout(10) { (error) -> Void in
+            
+        }
     }
     
     func testPerformanceExample() {

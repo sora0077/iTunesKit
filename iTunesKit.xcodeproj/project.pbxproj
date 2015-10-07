@@ -29,6 +29,12 @@
 		D95880EB1BC0E77A008C549B /* iTunesKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95880E91BC0E77A008C549B /* iTunesKit.swift */; settings = {ASSET_TAGS = (); }; };
 		D95880F01BC0EFF8008C549B /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95880EF1BC0EFF8008C549B /* Search.swift */; settings = {ASSET_TAGS = (); }; };
 		D95880F91BC15474008C549B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95880F81BC15474008C549B /* SearchResult.swift */; settings = {ASSET_TAGS = (); }; };
+		D95880FD1BC413BD008C549B /* Lookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95880FC1BC413BD008C549B /* Lookup.swift */; settings = {ASSET_TAGS = (); }; };
+		D95880FF1BC57981008C549B /* APIKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D95880D31BC0E721008C549B /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95881001BC57993008C549B /* BrightFutures.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D95880D41BC0E721008C549B /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95881011BC5799D008C549B /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D95880D21BC0E721008C549B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95881021BC5799D008C549B /* LoggingKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D95880D51BC0E721008C549B /* LoggingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95881031BC5799D008C549B /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D95880D61BC0E721008C549B /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D95880FE1BC57978008C549B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D95881011BC5799D008C549B /* Alamofire.framework in CopyFiles */,
+				D95881021BC5799D008C549B /* LoggingKit.framework in CopyFiles */,
+				D95881031BC5799D008C549B /* Result.framework in CopyFiles */,
+				D95881001BC57993008C549B /* BrightFutures.framework in CopyFiles */,
+				D95880FF1BC57981008C549B /* APIKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +94,7 @@
 		D95880E91BC0E77A008C549B /* iTunesKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesKit.swift; sourceTree = "<group>"; };
 		D95880EF1BC0EFF8008C549B /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		D95880F81BC15474008C549B /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		D95880FC1BC413BD008C549B /* Lookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lookup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +200,7 @@
 			children = (
 				D95880EE1BC0ECC1008C549B /* Search */,
 				D95880EF1BC0EFF8008C549B /* Search.swift */,
+				D95880FC1BC413BD008C549B /* Lookup.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -238,6 +260,7 @@
 				D958809C1BC0D2B6008C549B /* Sources */,
 				D958809D1BC0D2B6008C549B /* Frameworks */,
 				D958809E1BC0D2B6008C549B /* Resources */,
+				D95880FE1BC57978008C549B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -308,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D95880EA1BC0E77A008C549B /* iTunesKit.swift in Sources */,
+				D95880FD1BC413BD008C549B /* Lookup.swift in Sources */,
 				D95880F91BC15474008C549B /* SearchResult.swift in Sources */,
 				D95880F01BC0EFF8008C549B /* Search.swift in Sources */,
 			);
