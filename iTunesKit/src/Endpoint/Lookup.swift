@@ -11,7 +11,7 @@ import APIKit
 
 public struct Lookup {
     
-    public var parameters: [String: AnyObject]? = [:]
+    public private(set) var parameters: [String: AnyObject]? = [:]
     
     public init(id: Int, country: String = "US") {
         parameters?["id"] = id

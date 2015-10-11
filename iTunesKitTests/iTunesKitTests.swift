@@ -48,10 +48,10 @@ class iTunesKitTests: XCTestCase {
         
         let itunes = API<Error>()
         
-        var search = Search(term: "twitter", country: "JP")
-        search.media = "media"
         
-        itunes.request(search).onSuccess { v in
+        let ranking = Ranking.allRankingTypes("ja")[3]
+        
+        itunes.request(ranking).onSuccess { v -> Void in
             print(v)
             expect.fulfill()
         }

@@ -18,3 +18,8 @@ public extension iTunesRequestToken {
         return NSURL(string: "http://")
     }
 }
+
+
+final class iTunesKit {
+    
+}
