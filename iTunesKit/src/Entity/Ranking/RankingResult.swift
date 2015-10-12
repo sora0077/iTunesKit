@@ -132,7 +132,7 @@ public struct RankingResult {
                 
                 public var id: Int
                 
-                public var isAddToWishlist: Int
+                public var isAddToWishlist: Bool
 
                 public var kind: String
                 
@@ -238,7 +238,7 @@ extension RankingResult.Chart.Content.Parent {
             componentName: dict["componentName"] as! String,
             genre: dict["genre"] as! String,
             id: Int(dict["id"] as! String)!,
-            isAddToWishlist: dict["isAddToWishlist"] as! Int,
+            isAddToWishlist: (dict["isAddToWishlist"] as! Int) == 1,
             kind: dict["kind"] as! String,
             name: dict["name"] as! String,
             release_date: dict["release_date"] as? String,

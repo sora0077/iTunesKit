@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D93B8D481BCAAF3B00D0FD73 /* TrackViewUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B8D471BCAAF3B00D0FD73 /* TrackViewUrl.swift */; settings = {ASSET_TAGS = (); }; };
 		D958809A1BC0D2B5008C549B /* iTunesKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D95880991BC0D2B5008C549B /* iTunesKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D95880A11BC0D2B6008C549B /* iTunesKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95880961BC0D2B5008C549B /* iTunesKit.framework */; settings = {ASSET_TAGS = (); }; };
 		D95880A61BC0D2B6008C549B /* iTunesKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95880A51BC0D2B6008C549B /* iTunesKitTests.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D93B8D471BCAAF3B00D0FD73 /* TrackViewUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackViewUrl.swift; sourceTree = "<group>"; };
 		D95880961BC0D2B5008C549B /* iTunesKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iTunesKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95880991BC0D2B5008C549B /* iTunesKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTunesKit.h; sourceTree = "<group>"; };
 		D958809B1BC0D2B5008C549B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				D95880EF1BC0EFF8008C549B /* Search.swift */,
 				D95880FC1BC413BD008C549B /* Lookup.swift */,
 				D99F9D1A1BC583D9005578A2 /* Ranking.swift */,
+				D93B8D471BCAAF3B00D0FD73 /* TrackViewUrl.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			files = (
 				D95880EA1BC0E77A008C549B /* iTunesKit.swift in Sources */,
 				D99F9D211BC6C67B005578A2 /* RankingResult.swift in Sources */,
+				D93B8D481BCAAF3B00D0FD73 /* TrackViewUrl.swift in Sources */,
 				D95880FD1BC413BD008C549B /* Lookup.swift in Sources */,
 				D95880F91BC15474008C549B /* SearchResult.swift in Sources */,
 				D95880F01BC0EFF8008C549B /* Search.swift in Sources */,

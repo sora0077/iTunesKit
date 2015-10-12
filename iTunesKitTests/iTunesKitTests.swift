@@ -8,24 +8,27 @@
 
 import XCTest
 import APIKit
+import BrightFutures
 @testable import iTunesKit
 
 enum Error: APIKitErrorType {
     
-    case Unknown
+    case Unknown(ErrorType)
     
     static func networkError(error: ErrorType) -> Error {
-        return .Unknown
+        return .Unknown(error)
     }
     
     static func validationError(error: ErrorType) -> Error {
-        return .Unknown
+        return .Unknown(error)
     }
     
     static func serializeError(error: ErrorType) -> Error {
-        return .Unknown
+        return .Unknown(error)
     }
 }
+
+extension TrackViewUrl: DebugRequestToken {}
 
 
 class iTunesKitTests: XCTestCase {
@@ -49,14 +52,28 @@ class iTunesKitTests: XCTestCase {
         let itunes = API<Error>()
         
         
-        let ranking = Ranking.allRankingTypes("ja")[3]
         
-        itunes.request(ranking).onSuccess { v -> Void in
-            print(v)
+        let ranking = Ranking.allRankingTypes("ja")[7]
+//        itunes.request(ranking)
+//            .flatMap { (v: RankingResult) -> Future<TrackViewUrl.Response, Error> in
+//                print(v.chart.content[0].url)
+//                return itunes.request(TrackViewUrl(url: v.chart.content[0].url))
+//            }
+        itunes.request(TrackViewUrl(url: "https://itunes.apple.com/jp/album/rising-hope/id862874145?i=862874227&l=en&uo=4"))
+            .onSuccess { v in
+                expect.fulfill()
+            }
+        .onFailure { (error) -> Void in
+            if let error = error as? Error {
+                switch error {
+                case let .Unknown(e):
+                    print(e)
+                }
+            }
+            print(error)
             expect.fulfill()
         }
-        
-        self.waitForExpectationsWithTimeout(10) { (error) -> Void in
+        self.waitForExpectationsWithTimeout(40) { (error) -> Void in
             
         }
     }
